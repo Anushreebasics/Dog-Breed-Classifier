@@ -1,0 +1,77 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = resnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                     Dog_02.jpg  label:                        dog
+ 2 key:          Coffee_mug_01.jpg.jpg  label:                 coffee mug
+ 3 key:                    Frog_01.jpg  label:                       frog
+ 4 key:                     Dog_01.jpg  label:                        dog
+{'Dog_02.jpg': ['dog', 'weimaraner', 0], 'Coffee_mug_01.jpg.jpg': ['coffee mug', 'cup', 0], 'Frog_01.jpg': ['frog', 'tree frog, tree-frog', 1], 'Dog_01.jpg': ['dog', 'vizsla, hungarian pointer', 0]}
+
+     MATCH:
+
+                   Frog_01.jpg: 
+Real:                       frog   Classifier:           tree frog, tree-frog
+
+ NOT A MATCH:
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:                     weimaraner
+
+         Coffee_mug_01.jpg.jpg: 
+Real:                 coffee mug   Classifier:                            cup
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:      vizsla, hungarian pointer
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+
+     MATCH:
+
+                   Frog_01.jpg: 
+Real:                       frog   Classifier:           tree frog, tree-frog  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:                     weimaraner  
+PetLabelDog: 1  ClassLabelDog: 1
+
+         Coffee_mug_01.jpg.jpg: 
+Real:                 coffee mug   Classifier:                            cup  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:      vizsla, hungarian pointer  
+PetLabelDog: 1  ClassLabelDog: 1
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+
+*** Results Summary for CNN Model Architecture RESNET ***
+N Images            :   4
+N Dog Images        :   2
+N Not-Dog Images    :   2
+ 
+Percentage of Match : 25.000000
+Percentage of Correct Dogs : 100.000000
+Percentage of Correct Breed : 0.000000
+Percentage of Correct Notdogs : 100.000000
+
+INCORRECT Dog Breed Assignment:
+Real:                        dog   Classifier:                     weimaraner
+Real:                        dog   Classifier:      vizsla, hungarian pointer
+
+** Total Elapsed Runtime: 0:0:1
